@@ -1,0 +1,116 @@
+@use "../../styles/index.scss" as *;
+.main-wrapper{
+    width:  100vw;
+    max-width: 420px;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    background-color: rgba($color: $transparent-color, $alpha: 0.96);
+    transform-origin: center left;
+    scale: 0 1;
+    opacity: 0;
+    transition: scale 0.25s ease-in-out, opacity 0.2s ease-in-out;
+    box-shadow: 2px 0px 4px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &.active{
+         scale: 1 1;
+         opacity: 1;  
+    }
+}
+
+app-menu-button-component{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.logo{
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+nav{
+    margin-top: 6rem;
+    width: max(75%, 200px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    p{
+        color: $font-negativ-color;
+        text-transform: uppercase;
+        font-weight: 700;
+        width: 100%;
+        opacity: 0.4;
+    }
+
+    ul{
+        margin: 1rem;
+        width: 100%;
+        @include normal-text($font-negativ-color);
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+
+        a{
+            text-decoration: none;
+            color: $font-negativ-color;
+            display: flex;
+            width: max-content;
+            margin: 8px 0px;
+            height: max-content;
+            align-items: center;
+            transition: color 0.125s ease-in-out;
+
+            icon {
+                font-size: 1.75rem;
+                margin-right: 2rem;
+                transition: color 0.125s ease-in-out;
+            }
+
+            &:hover, &:hover icon {
+                color:$link-color;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.buffer{
+    height: 100%;
+    flex-grow: 1;
+}
+
+.imprint{
+    width: max(75%, 200px);
+    display: flex;
+    gap: 1.5rem;
+    height: max-content;
+    padding-bottom: 2rem;
+    justify-content: start;
+
+    p{
+        opacity: 0.6;
+        @include normal-text($font-negativ-color);
+        font-weight: 300;
+        transition: opacity 0.125s ease-in-out;
+
+        &:hover{
+           opacity: 1; 
+           cursor: pointer;
+        }
+    }
+
+
+}

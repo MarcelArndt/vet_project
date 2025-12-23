@@ -1,0 +1,62 @@
+@use "../../styles/index.scss" as *;
+
+
+h4, h3{
+    margin: 0px;
+    color: $font-negativ-color;
+    text-align: center;
+}
+
+h4{
+    margin-bottom: 1rem;
+}
+
+p{
+     color: $font-negativ-color;
+     text-align: center;
+}
+
+ul{
+    margin-left: 3rem;
+    list-style: none;
+    padding: 12px 0px;
+    color: $font-negativ-color;
+    li{
+        padding: 8px 0px;
+    }
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-color: $accent-color;
+}
+
+.section-wrapper{
+    padding-top: 4rem;
+    position: relative;
+    padding-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    @include max-content-size();
+}
+
+.grid-cards-wrapper{
+    width: 70%;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+
+    @media screen and (max-width:1640px) {
+        width: 92%;
+    }
+}
+
+

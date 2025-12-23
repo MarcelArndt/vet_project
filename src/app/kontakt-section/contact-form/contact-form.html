@@ -1,0 +1,38 @@
+<div class="form-wrapper">
+    <form>
+        <div class="headline"><icon>email</icon><h4>Anfrageformular</h4></div>
+
+
+        <label for="name">Name<span>*</span></label>
+        <input type="text" id="name" autocomplete="name" spellcheck="true">
+
+        <label for="email">E-Mail<span>*</span></label>
+        <input type="text" id="email" autocomplete="email" spellcheck="true">
+
+        <label for="subject">Betreff<span>*</span></label>
+        <input type="text" id="subject" spellcheck="true">
+
+        <label for="species">Tierart</label>
+        <input type="text" id="species" spellcheck="true">
+
+        <label for="message">Nachricht<span>*</span></label>
+        <textarea spellcheck="true" id="message"></textarea>
+
+        <div class="accept-box">
+
+            <div class="checbox-wrapper">
+                <label class="hide" for="dataProtection">Datenschutz</label>
+                <input type="checkbox" id="dataProtection" (click)="toggleCheckBoxState()" required>
+                <div class="checkbox"></div>
+                <div class="checkmark" [class.active]="ischeckBoxState">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+                </div>
+            </div>
+            <p><a href="#start">Datenschutzerklärung</a> akzeptieren<span class="red">*</span></p>
+        </div>
+
+        <p class="info-text"><span>*</span>sind als Pflichtfelder markiert und müssen augefüllt werden. </p>
+
+        <button>Anfrage senden</button>
+    </form>
+</div>

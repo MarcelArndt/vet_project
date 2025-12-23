@@ -1,0 +1,232 @@
+@use "../../styles/index.scss" as *;
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 6rem;
+}
+
+h4{
+    margin: 0;
+    margin-bottom: 0.75rem;
+}
+
+.section-wrapper{
+    padding-top: clamp(10rem, 32vw, 15rem);
+    position: relative;
+    @include max-content-size();
+}
+
+.map-wrapper{
+    margin-top: clamp(3rem,6vw,6rem);
+    width: 100%;
+    height: min(800px,60vh);
+}
+
+.flex-columns{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width:1250px) {
+            width: 100%;
+    }
+}
+
+.column{
+    flex-direction: column;
+}
+
+.text-wrapper{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    @media screen and (max-width:1250px) {
+        flex-direction: column;
+    }
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}
+
+a{
+    width: max-content;
+}
+
+p{
+    max-width: 50ch;
+}
+
+.blue{
+  top: -60px;
+
+    @media screen and (max-width:800px) {
+        top: -7px;
+    } 
+
+    @media screen and (max-width:780px) {
+        left: -5px;  
+    }
+}
+
+
+.placeholder{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: blur(3px);
+        user-select: none;
+    }
+
+    &::before{
+        z-index: 1;
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: $background-color;
+        opacity: 0.82;
+    }
+}
+
+.text-block{
+        width: 70%;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        z-index: 2;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        p{
+            color: $font-negativ-color;
+        }
+
+        @media screen and (max-width:550px) {
+            width: 92%;
+        }
+}
+
+hr{
+    margin: 1.5rem 0px;
+    width: max(75%,200px);
+    max-width: 450px;
+    height: 1px;
+    border: 0px;
+    background-color: $font-negativ-color;
+}
+
+.accept-box{
+    display: flex;
+    width: 92%;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    gap: 1.25rem;
+    justify-content: center;
+
+    p{
+        font-size: 1rem;
+        max-width: 60ch;
+    }
+
+    @media screen and (max-width:550px) {
+       flex-direction: column; 
+       text-align: center;
+    }
+
+
+
+}
+
+.blue-button{
+    color: $accent-color;
+    background-color: transparent;
+    border: 2px solid $accent-color;
+    &:hover{
+      border-color: $yellow;
+      color: $yellow; 
+    }
+}
+
+.checbox-wrapper{
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+
+    .checbox{
+        border-radius: 4px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        border: 3px solid $paper-color;
+        pointer-events: none;
+    }
+
+    .checkmark{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        transform: translate(-50%,-50%);
+
+        svg{
+            fill: transparent;
+        }
+
+        &.active{
+            svg{
+                fill: $paper-color;
+            }
+        }
+    }
+
+    input{
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+
+        &:hover{ 
+            cursor: pointer;
+        }
+
+        &:hover ~ .checbox{ 
+            border-color: $accent-color;
+        }
+
+        &:hover ~.checkmark.active svg{
+            fill: $link-color;
+        }
+    }
+}
+
+.hide{
+    display: none;
+}

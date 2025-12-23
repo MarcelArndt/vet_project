@@ -1,0 +1,117 @@
+@use "../../styles/index.scss" as *;
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+p{
+    max-width: 63ch;
+}
+
+h3{
+     @media screen and (max-width:1250px) {
+        padding-top: 0rem;
+        margin-top: 0px;
+    }   
+}
+
+.section-wrapper{
+    padding-top: 2rem;
+    position: relative;
+    @include max-content-size();
+
+    @media screen and (max-width:1250px) {
+        padding-top: 0rem;
+    }
+}
+
+.contact-wrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 2.5rem;
+    @media screen and (max-width:1250px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.text-wrapper{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    height: 100%;
+    p{
+        max-width: 50ch;
+    }
+}
+
+.form-container{
+    flex: 1;
+}
+
+.info-space{
+    margin-top: 1.75rem;
+    width: 100%;
+    max-width: 420px;
+    background-color: $paper-color;
+    border: 1px solid $grey-200;
+    box-shadow: 0px 2px 4px $grey-200;
+    border-radius: 8px;
+    min-height: 6rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    icon{
+        user-select: none;
+        font-size: 2.5rem;
+        color: $grey-300;
+        margin-right: 1rem;
+        transition: color 0.25s ease-in-out;
+    }
+
+    .grey{
+        color:$grey-300;
+    }
+
+    p{
+        color:$font-color;
+    }
+
+    a{
+        text-decoration: none;
+        color:$font-color;
+
+        &:hover{
+            color:$button-hover-color;
+        }
+    }
+
+
+    
+    .link{
+        text-decoration: underline;
+        color: $link-color;
+    }
+}
+
+.info-text-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.info-block{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    color:$font-negativ-color; 
+}

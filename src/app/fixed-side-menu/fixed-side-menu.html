@@ -1,0 +1,19 @@
+<div class="main-wrapper" (click)="preventClick($event)" [ngClass]="{'active' : menuState}">
+    <app-menu-button-component></app-menu-button-component>
+    <nav>
+        <p>Navigation</p>
+        <ul>
+            <li><a [routerLink]="['/']" fragment="hero-section" (click)="closeNavigation()"><icon>home</icon>Start</a></li>
+            <li><a [routerLink]="['/']" fragment="start-section" (click)="closeNavigation()"><icon>waving_hand</icon>Willkommen</a></li>
+            <li><a [routerLink]="['/']" fragment="info-section" (click)="closeNavigation()"><icon>info</icon>Alle Infos</a></li>
+            <li><a [routerLink]="['/']" fragment="praxis-section" (click)="closeNavigation()"><icon>home_health</icon>Unsere Praxis</a></li>
+            <li><a [routerLink]="['/']" fragment="ueber-uns-section" (click)="closeNavigation()"><icon>person</icon>Über Uns</a></li>
+            <li><a [routerLink]="['/']" fragment="leistung-section" (click)="closeNavigation()"><icon>package_2</icon>Leistung</a></li>
+            <li><a [routerLink]="['/']" fragment="hero-section" (click)="closeNavigation()"><icon>imagesmode</icon>Galerie</a></li>
+            <li><a [routerLink]="['/']" fragment="map-section" (click)="closeNavigation()"><icon>location_on</icon>Karte/Standort</a></li>
+            <li><a [routerLink]="['/']" fragment="contact-section" (click)="closeNavigation()"><icon>mail</icon>Kontakt</a></li>
+        </ul>
+    </nav>
+    <div class="buffer"></div>
+    <div class="imprint"><p>Impressum</p><p>Datenschutz</p></div>
+</div>

@@ -1,0 +1,53 @@
+<section class="wrapper" id="map-section">
+
+    <div class="wave-element blue"><img src="./assets/map-section/wave-blue.svg" alt="Hintergrundelement"></div>
+
+    <div class="section-wrapper" >
+        <div class="flex column">
+            <h3>Ihr Weg zu uns</h3>
+            <div class="text-wrapper">
+                <div class="flex-columns">
+                <p>Damit Sie und Ihr Tier entspannt bei uns ankommen, haben wir unseren Standort für Sie in der Karte hinterlegt. Ein Klick genügt, um die passende Route zu finden - egal ob zu Fuß, mit dem Auto oder den öffentlichen Verkehrsmitteln.<br><br>Finden Sie uns schnell und einfach und buchen Sie direkt Ihren Termin.</p>
+                <a class="button" href="tel:+4952229609250"><icon>call</icon><span>Jetzt anrufen</span></a>
+                </div>
+                <div class="flex-columns">
+                    <h4>Teilen Sie Ihre Erfahrung</h4>
+                    <p>Wir freuen uns über Ihr Feedback. Teilen Sie Ihre Erfahrung mit einer Bewertung auf Google.</p>
+                    <a class="button blue-button" target="_blank" href="https://www.google.com/maps/place/Tanja+Kr%C3%BCger/@52.0903798,8.7258449,18.25z/data=!4m8!3m7!1s0x47ba14da9a278cbd:0x19b7a805d774c45f!8m2!3d52.090414!4d8.7266968!9m1!1b1!16s%2Fg%2F1tmqf9b1!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D">
+                        <icon>star</icon>
+                        <span>zu Bewertungen</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="map-wrapper">
+        @if(!checkBoxState){
+            <div class="placeholder" >
+                <div class="text-block">
+                    <p>Um die Karte anzuzeigen, wird Google Maps geladen. Dabei können personenbezogene Daten (z. B. IP-Adresse) an Google übermittelt werden. Bitte akzeptiere die Google-Nutzungsbedingungen, um die Karte zu laden.</p>
+                    <hr>
+                    <div class="accept-box">
+                        <div class="checbox-wrapper">
+                            <label class="hide" for="data-protection-map">Datenschutz</label>
+                            <input type="checkbox" name="data-protection-map" (click)="toggleCheckBoxState()" required>
+                            <div class="checbox"></div>
+                            <div class="checkmark" [class.active]="ischeckBoxState">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+                            </div>
+                        </div>
+                        <p>Hiermit bestätige ich, dass durch das Laden von Google Maps personenbezogene Daten an Google übermittelt werden können.</p>
+                    </div>
+                </div>
+            <img src="./assets/map-section/placeholder.jpg" alt="Placeholder bei nicht geladener Google-Map">
+        </div>
+        } @else {
+            <iframe title="Standort der Tierarztpraxis Krüger in Bad Salzuflen" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d612.8542009596073!2d8.72663510676961!3d52.09034558009494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba14da9a278cbd%3A0x19b7a805d774c45f!2sTanja%20Kr%C3%BCger!5e0!3m2!1sde!2sde!4v1765791542308!5m2!1sde!2sde" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        }
+    
+    </div>
+
+</section>
+
+

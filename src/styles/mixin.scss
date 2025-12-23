@@ -1,0 +1,48 @@
+@use "./variables.scss" as *;
+
+@mixin normal-text($color:#000000) {
+    font-size: $font-size;
+    font-family: $font-one;
+    font-weight: 400;
+    color:$color
+}
+
+@mixin max-content-size(){
+    width: 82%;
+    @media screen and (max-wdith: 1000px) {
+       width: 96%; 
+    }
+}
+
+@mixin button {
+    @include normal-text($font-negativ-color);
+    margin: 1rem 0px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.15rem 0.5rem 0.75rem;
+    background-color: $button-color;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    transition: scale 0.25s ease-in-out, background-color 0.25s ease-in-out;
+
+    icon{
+        font-size: 1.75rem;
+        margin-right: 0.55ch;
+    }
+
+    &:hover{
+        cursor: pointer;
+        scale: 1.05;
+        background-color: $button-hover-color;
+    }
+
+    &.red{
+        background-color: $red;
+
+        &:hover{
+            background-color: $red-hover;
+        }
+    }
+}

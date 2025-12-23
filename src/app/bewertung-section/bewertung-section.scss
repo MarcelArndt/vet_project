@@ -1,0 +1,40 @@
+@use "../../styles/index.scss" as *;
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-color: $accent-color;
+}
+
+.section-wrapper{
+    padding-top: 2rem;
+    position: relative;
+    @include max-content-size();
+}
+
+.body p{
+   font-size: clamp(16px, 3vw, 20px);
+   margin-bottom: 0.25rem;
+}
+
+span{
+        font-size: 1rem;
+        color:$grey-300;
+}
+
+small{
+font-size: 0.75rem;
+display: block;
+padding-bottom: 1rem;
+color:$grey-300;
+}
+
+a{
+    font-size: 1rem;
+    &:hover{
+        color: $font-color;
+    }   
+}

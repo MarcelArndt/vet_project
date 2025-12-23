@@ -1,0 +1,108 @@
+@use "../../styles/index.scss" as *;
+
+.hero-wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    @media screen and (max-width:570px) {
+        margin-bottom: 0px;
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1366px) {
+        font-size: clamp(2rem, 12vw, 4rem);
+    }
+}
+
+h2{
+     @media screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1366px) {
+        font-size: 1.65rem;
+    }   
+}
+
+.hero-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 202;
+    height:max-content;
+    box-sizing: border-box;
+    padding-bottom: 4rem;
+    padding-top: 32px;
+    height: 100%;
+    justify-content: center;
+
+
+    @include max-content-size();
+
+
+    @media screen and (max-width:570px) {
+        text-align: center;
+        justify-content: end;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        height: calc(100% / 2 * 1);
+    }
+
+    @media screen and (max-width:360px) {
+        margin-top: 3rem;
+    }
+
+}
+
+.transparent-background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 105;
+    user-select: none;
+    pointer-events: none;
+    background-color: $transparent-color;
+    opacity: $transparent-value;
+}
+
+
+.white {
+    bottom: -65px;
+    z-index: 200;
+    @media screen and (max-width:800px) {
+        left: -3px;
+        bottom: -7px; 
+    }
+
+}
+
+.blue {
+    bottom: -65px;
+    opacity: 0.5;
+    z-index: 200;
+    @media screen and (max-width:800px) {
+        left: -3px;
+        bottom: -7px;  
+    }
+}
+
+.flex{
+    justify-content: start;
+    @media screen and (max-width:570px) {
+        width: 100%;
+        display: flex;
+        margin-top: 0.5rem;
+        justify-content:center;
+
+        a{
+            margin: 4px;
+        }
+    }
+
+    @media screen and (max-width:360px) {
+        flex-direction: column;
+    }
+}

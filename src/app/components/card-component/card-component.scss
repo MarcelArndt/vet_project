@@ -1,0 +1,21 @@
+@use "./../../../styles/index.scss" as *;
+
+:host{
+    flex: 0 0 400px;
+    scroll-snap-align:start;
+}
+
+.card-wrapper{
+    background-color: $paper-color;
+    border-radius: 8px;
+    border: 1px solid $grey-200;
+    padding: 1.5rem 1.125rem;
+    margin: 0rem 1rem;
+}
+
+@media screen and (max-width:500px){
+    :host{
+        flex: 0 0 100%;
+    }
+}
+

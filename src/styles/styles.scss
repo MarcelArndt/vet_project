@@ -1,0 +1,124 @@
+@use "./index.scss" as *;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: $font-one;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-weight: 500;
+    font-size: $font-size;
+    scroll-behavior: smooth;
+}
+
+p{
+    @include normal-text();
+    height: max-content;
+    max-width: 55ch;
+    line-height: 140%;
+}
+
+h1{
+    font-size: $h1-font-size;
+    color: $font-negativ-color;
+    line-height: 130%;
+    font-weight: 900;
+    max-height: max-content;
+    margin: 1rem 0rem;
+}
+
+h2{
+    margin: 1rem 0rem;
+    font-size: $h2-font-size;
+    color: $font-negativ-color;
+    line-height: 130%;
+    font-weight: 300;
+    max-width: 33ch;
+    max-height: max-content;
+}
+
+h3{
+    margin: 1rem 0rem;
+    font-size: $h3-font-size;
+    color: $font-color;
+    line-height: 130%;
+    font-weight: 600;
+    max-height: max-content;
+    max-width: 15ch;
+}
+
+h4{
+    margin: 1rem 0rem;
+    font-size: $h4-font-size;
+    color: $font-color;
+    line-height: 130%;
+    font-weight: 400;
+    max-height: max-content;
+    max-width: 20ch;
+}
+
+h5{
+    margin: 1.25rem 0rem 0.5rem 0rem;
+    font-size: $h5-font-size;
+    color: $font-color;
+    line-height: 130%;
+    font-weight: 400;
+    max-height: max-content;
+
+}
+
+button{
+    @include button();
+}
+
+a{
+    @include normal-text();
+    color: $link-color; 
+    &:hover{
+        color: $font-negativ-color; 
+    }  
+}
+
+
+.negativ-text-color{
+   color: $font-negativ-color; 
+}
+
+.flex{
+    display: flex;
+}
+
+.gap{
+    gap: 1rem;
+}
+
+.flex.center {
+    justify-content: center;
+}
+
+.flex.vertical-center {
+    align-items: center;
+}
+
+.button{
+    @include button();
+}
+
+.wave-element {
+    width: 100%;
+    height: max-content;
+    position: absolute;
+    left: 0%;
+    user-select: none;
+    pointer-events: none;
+
+    @media screen and (max-width:800px) {
+        img{
+            width: 800px;
+        }
+    }
+}
+
