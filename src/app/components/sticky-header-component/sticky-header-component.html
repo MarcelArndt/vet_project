@@ -1,3 +1,5 @@
-<div #header class="stick-header" [ngClass]="{'hide': isScrollingUpWards}">
-    <ng-content></ng-content>
+<div class="sticky-head-wrapper">
+    <div #header class="stick-header" [ngClass]="{'hide': isScrollingUpWards}">
+        <ng-content></ng-content>
+    </div>
 </div>

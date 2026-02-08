@@ -52,9 +52,13 @@
     @media screen and (max-width:860px) {
         transform: scaleX(-1) translate(50%, 0%);
         left: 50%;
-        bottom: 0%;
+        bottom: 0;
         right: auto;
         width: 100%;
+    }
+
+    @media screen and (max-width:470px) {
+        bottom: -35px;
     }
 }
 

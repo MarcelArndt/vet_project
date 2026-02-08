@@ -20,12 +20,6 @@ export class StickyHeaderComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    if(!this.headerElement) return;
-    if (scrollTop > this.initialOffsetTop) {
-      this.headerElement.nativeElement.style.top = `${scrollTop}px`;
-    } else {
-      this.headerElement.nativeElement.style.top = '0px';
-    }
     this.isScrollingUpWards = this.currentPosition < scrollTop  || scrollTop == 0 ? false : true;
     this.currentPosition = scrollTop;
   }
